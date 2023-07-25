@@ -1,0 +1,491 @@
+	.file	"sevd.f08"
+	.text
+	.section	.rodata
+.LC0:
+	.string	"sevd.f08"
+.LC1:
+	.ascii	"array7D("
+.LC2:
+	.ascii	","
+.LC3:
+	.ascii	") = "
+.LC4:
+	.ascii	" record count"
+	.text
+	.type	MAIN__, @function
+MAIN__:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$560, %rsp
+	movl	$0, -32(%rbp)
+	movl	$1, -4(%rbp)
+.L15:
+	movl	-4(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L30
+	movl	$1, -8(%rbp)
+.L14:
+	movl	-8(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L31
+	movl	$1, -12(%rbp)
+.L13:
+	movl	-12(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L32
+	movl	$1, -16(%rbp)
+.L12:
+	movl	-16(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L33
+	movl	$1, -20(%rbp)
+.L11:
+	movl	-20(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L34
+	movl	$1, -24(%rbp)
+.L10:
+	movl	-24(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L35
+	movl	$1, -28(%rbp)
+.L9:
+	movl	-28(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L36
+	movl	-4(%rbp), %edx
+	movl	-8(%rbp), %eax
+	addl	%eax, %edx
+	movl	-12(%rbp), %eax
+	addl	%eax, %edx
+	movl	-16(%rbp), %eax
+	addl	%eax, %edx
+	movl	-20(%rbp), %eax
+	addl	%eax, %edx
+	movl	-24(%rbp), %eax
+	leal	(%rdx,%rax), %esi
+	movl	-28(%rbp), %ecx
+	movl	-28(%rbp), %eax
+	cltq
+	imulq	$117649, %rax, %rdx
+	movl	-24(%rbp), %eax
+	cltq
+	imulq	$16807, %rax, %rax
+	addq	%rax, %rdx
+	movl	-20(%rbp), %eax
+	cltq
+	imulq	$2401, %rax, %rax
+	addq	%rax, %rdx
+	movl	-16(%rbp), %eax
+	cltq
+	imulq	$343, %rax, %rax
+	leaq	(%rdx,%rax), %rdi
+	movl	-12(%rbp), %eax
+	movslq	%eax, %rdx
+	movq	%rdx, %rax
+	addq	%rax, %rax
+	addq	%rdx, %rax
+	salq	$4, %rax
+	addq	%rdx, %rax
+	addq	%rax, %rdi
+	movl	-8(%rbp), %eax
+	movslq	%eax, %rdx
+	movq	%rdx, %rax
+	salq	$3, %rax
+	subq	%rdx, %rax
+	leaq	(%rdi,%rax), %rdx
+	movl	-4(%rbp), %eax
+	cltq
+	addq	%rdx, %rax
+	subq	$137257, %rax
+	addl	%esi, %ecx
+	leaq	0(,%rax,4), %rdx
+	leaq	array7d.1(%rip), %rax
+	movl	%ecx, (%rdx,%rax)
+	movl	-28(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -28(%rbp)
+	jmp	.L9
+.L36:
+	nop
+	movl	-24(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -24(%rbp)
+	jmp	.L10
+.L35:
+	nop
+	movl	-20(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -20(%rbp)
+	jmp	.L11
+.L34:
+	nop
+	movl	-16(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -16(%rbp)
+	jmp	.L12
+.L33:
+	nop
+	movl	-12(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -12(%rbp)
+	jmp	.L13
+.L32:
+	nop
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -8(%rbp)
+	jmp	.L14
+.L31:
+	nop
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	jmp	.L15
+.L30:
+	nop
+	movl	$1, -4(%rbp)
+.L29:
+	movl	-4(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L37
+	movl	$1, -8(%rbp)
+.L28:
+	movl	-8(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L38
+	movl	$1, -12(%rbp)
+.L27:
+	movl	-12(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L39
+	movl	$1, -16(%rbp)
+.L26:
+	movl	-16(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L40
+	movl	$1, -20(%rbp)
+.L25:
+	movl	-20(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L41
+	movl	$1, -24(%rbp)
+.L24:
+	movl	-24(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L42
+	movl	$1, -28(%rbp)
+.L23:
+	movl	-28(%rbp), %eax
+	cmpl	$7, %eax
+	setg	%al
+	movzbl	%al, %eax
+	testl	%eax, %eax
+	jne	.L43
+	leaq	.LC0(%rip), %rax
+	movq	%rax, -552(%rbp)
+	movl	$32, -544(%rbp)
+	movl	$128, -560(%rbp)
+	movl	$6, -556(%rbp)
+	leaq	-560(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$8, %edx
+	leaq	.LC1(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-4(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-8(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-12(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-16(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-20(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-24(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$1, %edx
+	leaq	.LC2(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-28(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	leaq	.LC3(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	movl	-28(%rbp), %eax
+	cltq
+	imulq	$117649, %rax, %rdx
+	movl	-24(%rbp), %eax
+	cltq
+	imulq	$16807, %rax, %rax
+	addq	%rax, %rdx
+	movl	-20(%rbp), %eax
+	cltq
+	imulq	$2401, %rax, %rax
+	addq	%rax, %rdx
+	movl	-16(%rbp), %eax
+	cltq
+	imulq	$343, %rax, %rax
+	leaq	(%rdx,%rax), %rcx
+	movl	-12(%rbp), %eax
+	movslq	%eax, %rdx
+	movq	%rdx, %rax
+	addq	%rax, %rax
+	addq	%rdx, %rax
+	salq	$4, %rax
+	addq	%rdx, %rax
+	addq	%rax, %rcx
+	movl	-8(%rbp), %eax
+	movslq	%eax, %rdx
+	movq	%rdx, %rax
+	salq	$3, %rax
+	subq	%rdx, %rax
+	leaq	(%rcx,%rax), %rdx
+	movl	-4(%rbp), %eax
+	cltq
+	addq	%rdx, %rax
+	subq	$137257, %rax
+	leaq	0(,%rax,4), %rdx
+	leaq	array7d.1(%rip), %rax
+	leaq	(%rdx,%rax), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write_done@PLT
+	movl	-32(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -32(%rbp)
+	movl	-28(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -28(%rbp)
+	jmp	.L23
+.L43:
+	nop
+	movl	-24(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -24(%rbp)
+	jmp	.L24
+.L42:
+	nop
+	movl	-20(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -20(%rbp)
+	jmp	.L25
+.L41:
+	nop
+	movl	-16(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -16(%rbp)
+	jmp	.L26
+.L40:
+	nop
+	movl	-12(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -12(%rbp)
+	jmp	.L27
+.L39:
+	nop
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -8(%rbp)
+	jmp	.L28
+.L38:
+	nop
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -4(%rbp)
+	jmp	.L29
+.L37:
+	nop
+	leaq	.LC0(%rip), %rax
+	movq	%rax, -552(%rbp)
+	movl	$41, -544(%rbp)
+	movl	$128, -560(%rbp)
+	movl	$6, -556(%rbp)
+	leaq	-560(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write@PLT
+	leaq	-560(%rbp), %rax
+	movl	$13, %edx
+	leaq	.LC4(%rip), %rcx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_character_write@PLT
+	leaq	-32(%rbp), %rcx
+	leaq	-560(%rbp), %rax
+	movl	$4, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	_gfortran_transfer_integer_write@PLT
+	leaq	-560(%rbp), %rax
+	movq	%rax, %rdi
+	call	_gfortran_st_write_done@PLT
+	nop
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	MAIN__, .-MAIN__
+	.globl	main
+	.type	main, @function
+main:
+.LFB1:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	%edi, -4(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-16(%rbp), %rdx
+	movl	-4(%rbp), %eax
+	movq	%rdx, %rsi
+	movl	%eax, %edi
+	call	_gfortran_set_args@PLT
+	leaq	options.2.0(%rip), %rax
+	movq	%rax, %rsi
+	movl	$7, %edi
+	call	_gfortran_set_options@PLT
+	call	MAIN__
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	main, .-main
+	.local	array7d.1
+	.comm	array7d.1,3294172,32
+	.section	.rodata
+	.align 16
+	.type	options.2.0, @object
+	.size	options.2.0, 28
+options.2.0:
+	.long	2116
+	.long	4095
+	.long	0
+	.long	1
+	.long	1
+	.long	0
+	.long	31
+	.ident	"GCC: (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0"
+	.section	.note.GNU-stack,"",@progbits
