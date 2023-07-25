@@ -1,0 +1,25 @@
+ ian@ian-Latitude-3190-2-in-1:~$ gfortran sevd.f08 
+ian@ian-Latitude-3190-2-in-1:~$ time ./a.out > se.txt
+
+real	0m2.214s
+user	0m1.668s
+sys	0m0.471s
+ian@ian-Latitude-3190-2-in-1:~$ gfortran sevd.f08  -funroll-all-loops
+ian@ian-Latitude-3190-2-in-1:~$ time ./a.out >se2.txt
+
+real	0m2.145s
+user	0m1.574s
+sys	0m0.565s
+ian@ian-Latitude-3190-2-in-1:~$ gfortran sevd.f08  -O3
+ian@ian-Latitude-3190-2-in-1:~$ time ./a.out > se3.txt
+
+real	0m2.120s
+user	0m1.440s
+sys	0m0.676s
+ian@ian-Latitude-3190-2-in-1:~$ gfortran sevd.f08  -ffast-math
+ian@ian-Latitude-3190-2-in-1:~$ time ./a.out > se4.txt
+
+real	0m2.153s
+user	0m1.622s
+sys	0m0.519s
+ian@ian-Latitude-3190-2-in-1:~$ 
